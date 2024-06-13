@@ -21,7 +21,6 @@ This project is a simple console application written in C# that allows a user to
 
 ```bash
 git clone https://github.com/GibranRaydan/SumDirectoriesSize.git
-cd SumDirectoriesSize
 ```
 
 ## Using Visual Studio
