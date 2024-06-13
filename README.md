@@ -71,8 +71,8 @@ GetDirectorySize method:
   - Handles common errors like unauthorized access and missing directories gracefully.
   - Returns the total file size in bytes.
     
-DataConverters methods
-Each method takes a long value representing the number of bytes and returns a double value representing the size in the corresponding unit (MB, GB, TB).
+DataConverters methods:
+  - Each method takes a long value representing the number of bytes and returns a double value representing the size in the corresponding unit (MB, GB, TB).
 
 Main method
   - Input Handling: Collects up to three valid directory paths from the user.
