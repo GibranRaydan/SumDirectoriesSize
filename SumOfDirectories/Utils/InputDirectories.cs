@@ -43,7 +43,7 @@
 
             try
             {
-                string[] files = Directory.GetFiles(dirPath, "*", SearchOption.AllDirectories);
+                var files = Directory.EnumerateFiles(dirPath, "*", SearchOption.AllDirectories);
                 foreach (string file in files)
                 {
                     FileInfo fileInfo = new FileInfo(file);

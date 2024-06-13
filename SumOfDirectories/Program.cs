@@ -13,7 +13,17 @@ class Program
 
             foreach (string directory in directories)
             {
-                tasks.Add(Task.Run(() => inputDirectories.GetDirectorySize(directory)));
+                Task<long> task = Task.Run(() => inputDirectories.GetDirectorySize(directory));
+                task.ContinueWith(t =>
+                {
+                    if (t.IsFaulted)
+                    {
+                        // Handle exception
+                        Console.WriteLine($"An error occurred: {t.Exception}");
+                    }
+                });
+
+                tasks.Add(task);
             }
 
             Task.WaitAll(tasks.ToArray());
@@ -40,4 +50,3 @@ class Program
         }
     }
 }
-
